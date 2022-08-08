@@ -17,7 +17,7 @@ const MainScreen = ({ weatherObj }) => {
     const mainWeatherState = weather[0].main
 
     const getWeatherVibe = (mainState) => {
-        return suggestions["Clouds"]
+        return suggestions[mainState]
     }
 
     const weatherVibe = getWeatherVibe(mainWeatherState)

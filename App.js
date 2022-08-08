@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {
 	SafeAreaView,
-	ScrollView,
 	StatusBar,
-	StyleSheet,
-	Text,
-	useColorScheme,
-	View,
 	PermissionsAndroid
 } from 'react-native';
 import Loader from './src/views/Loader/Loader';
@@ -44,9 +39,9 @@ const App = () => {
 						buttonNegative: "Cancel"
 					}
 					)
-					.then(res => {
-						res === "granted" ? setIsGranted(true) : setError("We need access to your geolocation")
-					})
+						.then(res => {
+							res === "granted" ? setIsGranted(true) : setError("We need access to your geolocation")
+						})
 				}
 			} catch (error) {
 				console.log(error.message)
@@ -81,9 +76,5 @@ const App = () => {
 		</SafeAreaView>
 	);
 };
-
-const styles = StyleSheet.create({
-
-});
 
 export default App;
